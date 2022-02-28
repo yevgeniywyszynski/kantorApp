@@ -1,0 +1,32 @@
+@import '../../styles/settings.scss';
+
+.component {
+  padding-bottom: 50px;
+}
+
+.title {
+  padding: ($base-size * 3) 0;
+  text-align: center;
+  font-size: ($base-size * 5);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.subtitle {
+  padding: ($base-size * 2) 0;
+  text-align: center;
+  font-size: ($base-size * 3);
+  font-style: italic;
+  font-weight: normal;
+}
+
+.title + .subtitle {
+  margin-top: (- $base-size * 3);
+}
+
+.contentAbout {
+  background-color: red;
+  width: 60%;
+  margin: 0 auto;
+}
+

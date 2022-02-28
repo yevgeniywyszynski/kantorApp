@@ -1,0 +1,42 @@
+@import '../../styles/settings.scss';
+
+.navigationWrapper {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 15px;
+    background-color: rgba(0,0,0,0.7);
+    text-transform: uppercase;
+}
+
+.linkRoad {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    &:hover{
+        border-bottom: 3px solid #01FF70;
+    }
+}
+
+.titleLogo {
+        padding:10px;
+        position: relative;
+        -webkit-animation: linear infinite;
+        -webkit-animation-name: run;
+        -webkit-animation-duration: 10s;
+      }
+      @-webkit-keyframes run {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: 10%;
+        }
+        100% {
+          left: 0;    
+        }
+}

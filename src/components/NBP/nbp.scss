@@ -1,0 +1,28 @@
+@import '../../styles/settings.scss';
+
+.link {
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    display: inline-block;
+}
+
+.link:hover {
+    background-color: red;
+}
+
+.nbpLink {
+    text-align: center;
+}
+
+.finger{
+    font-size: 20px;
+    color: red;
+    margin-right: 10px;
+}
+
+.fingerLeft {
+    font-size: 20px;
+    color: red;
+    margin-left: 10px;
+}

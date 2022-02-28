@@ -1,0 +1,62 @@
+@import '../../styles/settings.scss';
+
+.inputWrapper {
+    text-align: center;
+    margin: 40px auto 0 auto;
+    width: 60%;
+}
+
+.gridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.input {
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    //background: linear-gradient(21deg, #01FF70, #1beabd);
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    width: 100%;
+
+    &::placeholder{
+        color: #fff;
+    }
+}
+
+      
+.choise {
+    border: none;
+    padding: 13.5px 10px;
+    font-weight: bold;
+    background: linear-gradient(21deg, #01FF70, #1beabd);
+    font-size: 17px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button {
+    border: none;
+    background: linear-gradient(21deg, #01FF70, #1beabd);
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+@media (max-width: 799px) {
+    .gridWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
