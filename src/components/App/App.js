@@ -26,18 +26,18 @@ state = {
  }
 
   fetchFromNbp = async _ => {
-    const responseDolar = await fetch('http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json')
+    const responseDolar = await fetch('https://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json')
     const responseUSD = await responseDolar.json()
 
-    const responseEuro = await fetch('http://api.nbp.pl/api/exchangerates/rates/c/eur/today/')
+    const responseEuro = await fetch('https://api.nbp.pl/api/exchangerates/rates/c/eur/today/')
     const responseEUR = await responseEuro.json()
 
 
-    const responseFuntBrytyjski = await fetch('http://api.nbp.pl/api/exchangerates/rates/c/GBP/today/')
+    const responseFuntBrytyjski = await fetch('https://api.nbp.pl/api/exchangerates/rates/c/GBP/today/')
     const responseGBR = await responseFuntBrytyjski.json()
 
 
-    const responseFrankSzwajcarski = await fetch('http://api.nbp.pl/api/exchangerates/rates/c/CHF/today/')
+    const responseFrankSzwajcarski = await fetch('https://api.nbp.pl/api/exchangerates/rates/c/CHF/today/')
     const responseCHF = await responseFrankSzwajcarski.json()
 
     const ratings = {
