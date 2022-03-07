@@ -69,7 +69,7 @@ class List extends React.Component{
                         min='0.00'
                         max='10000.00'
                         step='0.01'
-                        placeholder='Wpisz kwotę'
+                        placeholder='Wpisz kwote'
                         value={this.props.value}
                         onChange={this.handleChange}
                     />
