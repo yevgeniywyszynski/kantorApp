@@ -37,10 +37,10 @@ export const loadRatingsRequest = () => {
         dispatch(startRequest());
 
         try {
-            let resUsd = await axios.get('http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json');
-            let resEur = await axios.get('http://api.nbp.pl/api/exchangerates/rates/c/eur/today/');
-            let resFunt = await axios.get('http://api.nbp.pl/api/exchangerates/rates/c/GBP/today/');
-            let resFrank = await axios.get('http://api.nbp.pl/api/exchangerates/rates/c/CHF/today/')
+            let resUsd = await axios.get('https://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json');
+            let resEur = await axios.get('https://api.nbp.pl/api/exchangerates/rates/c/eur/today/');
+            let resFunt = await axios.get('https://api.nbp.pl/api/exchangerates/rates/c/GBP/today/');
+            let resFrank = await axios.get('https://api.nbp.pl/api/exchangerates/rates/c/CHF/today/')
             
             const newObj = {
               dataEuro: resEur.data,
