@@ -29,7 +29,6 @@ export default function reducer(statePart=[], action={}) {
             return {...statePart,
             currency: action.payload}
         case CHANGE_TYPEOPERATION:
-            console.log('type', action.payload)
             return {...statePart,
             typeOperation: action.payload}
         case CHANGE_RESULT:

@@ -40,3 +40,12 @@
     font-size: 17px;
     text-align: left;
 }
+
+@media (max-width: 630px) {
+    .wrapper {
+        width: 90%;
+    }
+    .title {
+        font-size: 15px;
+    }
+}

@@ -13,7 +13,7 @@ state = {
   }
 }
 
- componentDidMount(){
+ /*componentDidMount(){
    const ratesPromise  = this.fetchFromNbp();
    ratesPromise.then(res => 
     this.setState({
@@ -23,9 +23,9 @@ state = {
       }
     })
     )
- }
+ }*/
 
-  fetchFromNbp = async _ => {
+ /* fetchFromNbp = async _ => {
     const responseDolar = await fetch('https://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json')
     const responseUSD = await responseDolar.json()
 
@@ -59,7 +59,7 @@ state = {
       }
     }
     return ratings
-}
+}*/
 
   render() {
     return (

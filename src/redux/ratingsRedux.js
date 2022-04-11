@@ -24,7 +24,7 @@ export const startRequest = () => ({ type: START_REQUEST});
 export const endRequest = () => ({type: END_REQUEST});
 export const errorRequest = payload => ({payload, type: ERROR_REQUEST});
 
-export const loadRatings = payload => ({payload, type: LOAD_RATINGS})
+export const loadRatings = payload => ({payload, type: LOAD_RATINGS});
 
 
 

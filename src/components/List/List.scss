@@ -60,3 +60,9 @@
         flex-direction: column;
     }
 }
+
+@media (max-width: 640px) {
+    .inputWrapper {
+        width: 90%;
+    }
+}

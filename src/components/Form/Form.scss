@@ -30,3 +30,9 @@
 .content {
     font-size: 17px;
 }
+
+@media (max-width: 640px) {
+    .formWrapper {
+        width: 100%;
+    }
+}
