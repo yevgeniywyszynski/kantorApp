@@ -14,19 +14,25 @@ class List extends React.Component{
     )
 
     buyMoney = _ => {
-        const startSum = this.props.value
 
         let sum = 0
 
-        if(this.props.currency == "Euro") {
-            sum = startSum * this.props.euro?.rates[0].bid
-        } else if(this.props.currency == "Dollars"){
-            sum = startSum * this.props.usd?.rates[0].bid
-        } else if(this.props.currency == "Funt Brytyjski") {
-            sum = startSum * this.props.funt?.rates[0].bid
-        } else if(this.props.currency == "Frank Szwajcarski") {
-            sum = startSum * this.props.frank?.rates[0].bid
-        } 
+        if(this.props.value >= 0 && this.props.value != '') {
+            const startSum = this.props.value
+
+            if(this.props.currency == "Euro") {
+                sum = startSum * this.props.euro?.rates[0].bid
+            } else if(this.props.currency == "Dollars"){
+                sum = startSum * this.props.usd?.rates[0].bid
+            } else if(this.props.currency == "Funt Brytyjski") {
+                sum = startSum * this.props.funt?.rates[0].bid
+            } else if(this.props.currency == "Frank Szwajcarski") {
+                sum = startSum * this.props.frank?.rates[0].bid
+            } 
+
+        }else {
+            alert('wpisz prawidlowa liczbe')
+        }
 
         this.props.changeResult(this.createResult(sum))
         this.props.changeTypeOperation("Kup")       
@@ -37,17 +43,23 @@ class List extends React.Component{
     }
 
     sellMoney = event => {
-        const startSum = this.props.value
-        let sum = 0;
 
-        if(this.props.currency == "Euro") {
-            sum = startSum * this.props.euro?.rates[0].ask
-        } else if (this.props.currency == "Dollars") {
-            sum = startSum * this.props.usd?.rates[0].ask
-        } else if (this.props.currency == "Funt Brytyjski") {
-            sum = startSum * this.props.funt?.rates[0].ask
-        } else if (this.props.currency == "Frank Szwajcarski") {
-            sum = startSum * parseFloat(this.props.frank?.rates[0].ask.toFixed(2))
+        let sum = 0;
+        
+        if(this.props.value >= 0 && this.props.value != '') {
+            const startSum = this.props.value
+
+            if(this.props.currency == "Euro") {
+                sum = startSum * this.props.euro?.rates[0].ask
+            } else if (this.props.currency == "Dollars") {
+                sum = startSum * this.props.usd?.rates[0].ask
+            } else if (this.props.currency == "Funt Brytyjski") {
+                sum = startSum * this.props.funt?.rates[0].ask
+            } else if (this.props.currency == "Frank Szwajcarski") {
+                sum = startSum * parseFloat(this.props.frank?.rates[0].ask.toFixed(2))
+            }
+        } else {
+            alert('wpisz prawidlowa liczbe')
         }
 
         this.props.changeResult(this.createResult(sum))
@@ -64,6 +76,7 @@ class List extends React.Component{
         return(
             <div className={styles.inputWrapper}>
                 <div className={styles.gridWrapper}>
+
                     <input className={styles.input}
                         type='number'
                         min='0.00'
@@ -73,12 +86,14 @@ class List extends React.Component{
                         value={this.props.value}
                         onChange={this.handleChange}
                     />
+
                     <select className={styles.choise}id="walutas" onChange={this.changeTypeMoney}>
                         <option value="Euro">Euro €</option>
                         <option value="Dollars">Dollars $</option>
                         <option value="Funt Brytyjski">Funt Brytyjski £</option>
                         <option value="Frank Szwajcarski">Frank Szwajcarski CHF</option>
                     </select>
+
                     <input value={this.props.result} className={styles.input} type="text" readOnly></input>
                 </div>
                 <div>

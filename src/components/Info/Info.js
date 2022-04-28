@@ -9,11 +9,6 @@ class Info extends React.Component {
         buyTitle: PropTypes.node.isRequired,
     }
 
-    componentDidMount(){
-        const {loadRatingsRequest} = this.props;
-        loadRatingsRequest()
-    }
-
     render(){
         const {title, sellTitle, buyTitle } = this.props;
         
