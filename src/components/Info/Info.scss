@@ -1,50 +1,97 @@
 @import '../../styles/settings.scss';
-
+$font-familyRoboto: 'Roboto', sans-serif;
 
 
 .wrapper {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 40px;
-    background-color: #000;
-    opacity: 0.7;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
 }
 
-.moneyType {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 10px;
-    border: 2px solid green;
-}
 .wrapperMoney {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    gap: 20px;
-    border: 2px solid green;
     transition: all 0.2s;
+    padding: 10px;
+    border-right: 1px solid #000;
 }
-
-.wrapperMoney:hover {
-    background-color: green;
+.wrapperMoney:last-child{
+    border: none;
 }
 
 .title {
     font-size: 17px;
     font-weight: bold;
     padding-left: 5px;
+    color: #000;
+    padding: 0;
+    margin-right: 10px;
+    font-family: $font-familyRoboto;
+    font-weight: 700;
 }
 
 .price {
     font-size: 17px;
-    text-align: left;
+    text-align: left; 
+    color: #000;
+    margin: 0;
+}
+
+.typeOperation {
+    color: #000;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.priceDescription {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.iconTypeWrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.moneyIcon {
+    width: 25px;
+}
+
+@media (max-width: 850px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapperMoney:last-child{
+        border-right: 1px solid #000;;
+    }
 }
 
 @media (max-width: 660px) {
     .wrapper {
-        width: 90%;
+        grid-template-columns: 1fr;
+        width: 60%;
     }
+
+    .wrapperMoney {
+        border-right: none;
+        border-top: 1px solid #000;
+    }
+
+    .wrapperMoney:last-child{
+        border-right: none;
+    }
+    .wrapperMoney:last-child{
+        border-top: 1px solid #000;
+    }
+    .wrapperMoney:first-child {
+        border-top:none
+    }
+
+
     .title {
         font-size: 14px;
     }

@@ -21,13 +21,13 @@ class List extends React.Component{
             const startSum = this.props.value
 
             if(this.props.currency == "Euro") {
-                sum = startSum * this.props.euro?.rates[0].bid
+                sum = startSum * parseFloat(this.props.euro?.rates[0].bid.toFixed(4))
             } else if(this.props.currency == "Dollars"){
-                sum = startSum * this.props.usd?.rates[0].bid
+                sum = startSum * parseFloat(this.props.usd?.rates[0].bid.toFixed(4))
             } else if(this.props.currency == "Funt Brytyjski") {
-                sum = startSum * this.props.funt?.rates[0].bid
+                sum = startSum * parseFloat(this.props.funt?.rates[0].bid.toFixed(2))
             } else if(this.props.currency == "Frank Szwajcarski") {
-                sum = startSum * this.props.frank?.rates[0].bid
+                sum = startSum * parseFloat(this.props.frank?.rates[0].bid.toFixed(2))
             } 
 
         }else {
@@ -50,11 +50,11 @@ class List extends React.Component{
             const startSum = this.props.value
 
             if(this.props.currency == "Euro") {
-                sum = startSum * this.props.euro?.rates[0].ask
+                sum = startSum * parseFloat(this.props.euro?.rates[0].ask.toFixed(2))
             } else if (this.props.currency == "Dollars") {
-                sum = startSum * this.props.usd?.rates[0].ask
+                sum = startSum * parseFloat(this.props.usd?.rates[0].ask.toFixed(2))
             } else if (this.props.currency == "Funt Brytyjski") {
-                sum = startSum * this.props.funt?.rates[0].ask
+                sum = startSum * parseFloat(this.props.funt?.rates[0].ask.toFixed(2))
             } else if (this.props.currency == "Frank Szwajcarski") {
                 sum = startSum * parseFloat(this.props.frank?.rates[0].ask.toFixed(2))
             }
@@ -94,7 +94,7 @@ class List extends React.Component{
                         <option value="Frank Szwajcarski">Frank Szwajcarski CHF</option>
                     </select>
 
-                    <input value={this.props.result} className={styles.input} type="text" readOnly></input>
+                    <input value={this.props.result} className={styles.input} type="text" placeholder='0zł' readOnly></input>
                 </div>
                 <div>
                 <button className={styles.button} type="button" onClick={this.buyMoney}>KUP</button>

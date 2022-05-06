@@ -44,11 +44,13 @@ class Form extends React.Component{
     render(){
         return(
             <form className={styles.formWrapper} onSubmit={this.handleSubmit}>
-                <p className={styles.content}>Zarezerwuj cene</p>
-                <input onChange={this.changeName} className={styles.formInfo} type="text" placeholder="Imię" />
-                <input onChange={this.changeNumber} className={styles.formInfo} type="number" placeholder="+48" />
-                <button className={styles.buttonForm} type="submit">SEND</button>
-                <p className={styles.content}>Zadzwonimy do Ciebie w ciągłu 10 minut</p>
+                <div className={styles.formDescription}>
+                    <p className={styles.content}>Zarezerwuj cene</p>
+                    <input onChange={this.changeName} className={styles.formInfo} type="text" placeholder="Imię" />
+                    <input onChange={this.changeNumber} className={styles.formInfo} type="number" placeholder="+48" />
+                    <button className={styles.buttonForm} type="submit">SEND</button>
+                    <p className={styles.content}>Zadzwonimy do Ciebie w ciągłu 10 minut</p>
+                </div>
             </form>
         )
     }

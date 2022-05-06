@@ -1,0 +1,48 @@
+@import '../../styles/settings.scss';
+$font-familyRoboto: 'Roboto', sans-serif;
+
+
+.steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 30px;
+    margin-top: 30px;
+
+    .step {
+        background-color: #fff;
+        color: #000;
+        border-radius: 50px;
+        padding: 10px;
+        opacity: 0.9;
+    }
+    .stepNumber {
+        font-size: 13px;
+        font-family: $font-familyRoboto;
+    }
+
+    .stepDescription {
+        font-size: 15px;
+        font-family: $font-familyRoboto;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .imgStep {
+        width: 90px;
+    }
+}
+
+@media (max-width: 799px) {
+
+    .steps {
+        grid-template-columns: 1fr;
+        width: 45%;
+    }
+
+    .imgStep {
+        border-radius: 35px;
+    }
+}
