@@ -17,11 +17,6 @@ state = {
     return (
       <main className = {styles.component}>
         <Navigation />
-        {/* <h2 className={styles.title}>
-          Kantor
-          <i className="fa-solid fa-dollar-sign"></i>
-        </h2>
-        <h1 className={styles.subtitle}>Najlepsze ceny w miescie</h1> */}
         <Steps />
         <List />
         <Info title="Rodzaj Waluty" buyTitle="KUP" sellTitle="SPRZEDAJ" />

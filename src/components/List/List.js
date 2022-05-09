@@ -21,13 +21,13 @@ class List extends React.Component{
             const startSum = this.props.value
 
             if(this.props.currency == "Euro") {
-                sum = startSum * parseFloat(this.props.euro?.rates[0].bid.toFixed(4))
+                sum = (startSum * parseFloat(this.props.euro?.rates[0].bid)).toFixed(2)
             } else if(this.props.currency == "Dollars"){
-                sum = startSum * parseFloat(this.props.usd?.rates[0].bid.toFixed(4))
+                sum = (startSum * parseFloat(this.props.usd?.rates[0].bid)).toFixed(2)
             } else if(this.props.currency == "Funt Brytyjski") {
-                sum = startSum * parseFloat(this.props.funt?.rates[0].bid.toFixed(2))
+                sum = (startSum * parseFloat(this.props.funt?.rates[0].bid)).toFixed(2)
             } else if(this.props.currency == "Frank Szwajcarski") {
-                sum = startSum * parseFloat(this.props.frank?.rates[0].bid.toFixed(2))
+                sum = (startSum * parseFloat(this.props.frank?.rates[0].bid)).toFixed(2)
             } 
 
         }else {
@@ -50,13 +50,13 @@ class List extends React.Component{
             const startSum = this.props.value
 
             if(this.props.currency == "Euro") {
-                sum = startSum * parseFloat(this.props.euro?.rates[0].ask.toFixed(2))
+                sum = (startSum * parseFloat(this.props.euro?.rates[0].ask)).toFixed(2)
             } else if (this.props.currency == "Dollars") {
-                sum = startSum * parseFloat(this.props.usd?.rates[0].ask.toFixed(2))
+                sum = (startSum * parseFloat(this.props.usd?.rates[0].ask)).toFixed(2)
             } else if (this.props.currency == "Funt Brytyjski") {
-                sum = startSum * parseFloat(this.props.funt?.rates[0].ask.toFixed(2))
+                sum = (startSum * parseFloat(this.props.funt?.rates[0].ask)).toFixed(2)
             } else if (this.props.currency == "Frank Szwajcarski") {
-                sum = startSum * parseFloat(this.props.frank?.rates[0].ask.toFixed(2))
+                sum = (startSum * parseFloat(this.props.frank?.rates[0].ask)).toFixed(2)
             }
         } else {
             alert('wpisz prawidlowa liczbe')
