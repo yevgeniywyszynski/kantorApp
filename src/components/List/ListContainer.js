@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import List from "./List";
 import { getDataForEur, getDataForFrank, getDataForFunt, getDataForUsd, loadRatingsRequest } from '../../redux/ratingsRedux';
 import { getCurrency, getTypeOperation, getValue, getResult, changeValue, changeCurrency, changeResult, changeTypeOperation} from "../../redux/listRedux";
+import { addTransaction } from "../../redux/transactionHistoryRedux";
 
 
 const mapstateToProps = state => ({
@@ -22,6 +23,7 @@ const mapDispatchToProps = dispatch => ({
     changeCurrency: currency => dispatch(changeCurrency(currency)),
     changeResult: result => dispatch(changeResult(result)),
     changeTypeOperation: typeOperation => dispatch(changeTypeOperation(typeOperation)),
+    addTransaction: operationObj => dispatch(addTransaction(operationObj))
 })
 
 export default connect(mapstateToProps, mapDispatchToProps)(List);

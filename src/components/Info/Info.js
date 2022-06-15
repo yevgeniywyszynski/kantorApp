@@ -52,7 +52,7 @@ class Info extends React.Component {
                 </div>
                 <div className={styles.wrapperMoney}>
                     <div className={styles.iconTypeWrapper}>
-                        <h4 className={styles.title}>Funt Szwajcarski</h4>
+                        <h4 className={styles.title}>Frank Szwajcarski</h4>
                         <img className={styles.moneyIcon} src="https://pnggrid.com/wp-content/uploads/2021/06/Switzerland-Flag-Round-Image-1024x1024.png" />
                     </div>
                     <div className={styles.priceDescription}>
