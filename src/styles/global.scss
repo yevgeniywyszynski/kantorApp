@@ -2,19 +2,20 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 
 body {
   margin: 0;
   padding: 0;
-  background: $color-dark;
   font-family: $font-text;
   font-size: ($base-size * 1.1);
-  color: $color-light;
   letter-spacing: 0.5px;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f9/Money_Cash.jpg');
-
-
+  background: linear-gradient(180deg, #C6CBCF 50%, #EAECED 50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 :global(.container) {
@@ -22,5 +23,3 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
-
-@import "./typography.scss";

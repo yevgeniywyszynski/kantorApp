@@ -1,0 +1,34 @@
+.selectWrapper{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 4fr 1fr 4fr;
+    align-items: center;
+    .titleSelect{
+        color: #335566;
+        font-size: 16px;
+        margin-bottom: 8px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+    }
+    .moneyType{
+        width: 100%;
+        height: 56px;
+        color: #C2CBD9;
+        box-shadow: 3px 3px 7px #C2CBD9;
+        border-radius: 5px;
+        border: none;
+        padding-left: 16px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+    
+    }
+    .iconArrow{
+        color: #000;
+    }
+    .arrowMoney{
+        margin-top: 35px;
+        text-align: center;
+    }
+}

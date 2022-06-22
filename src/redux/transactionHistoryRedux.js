@@ -1,3 +1,5 @@
+export const getHistory = ({transactionHistory}) => transactionHistory;
+
 
 const reducerName = 'transaction';
 const createActionName = name => `app/${reducerName}/${name}`;
@@ -8,7 +10,8 @@ export const addTransaction = payload => ({payload, type: ADD_TRANSACTION})
 export default function reducer(statePart=[], action={}) {
     switch(action.type) {
         case ADD_TRANSACTION:
-            return {...statePart, transactionHistory: [...statePart.transactionHistory, action.payload]}
+            return  [...statePart, action.payload] 
     }
+
   return statePart
 }

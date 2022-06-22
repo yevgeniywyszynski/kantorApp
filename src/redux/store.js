@@ -1,25 +1,25 @@
 import { applyMiddleware, combineReducers, createStore, compose } from "redux";
-import ratingsRedux  from './ratingsRedux';
-import listRedux from './listRedux';
 import thunk from 'redux-thunk'
 import transactionHistoryRedux from '../redux/transactionHistoryRedux';
+import selectMoneyRedux from '../redux/selectMoneyRedux';
 
 const initialState = {
-    ratings: {},
-    list: {
-        value: '',
+    selectMoney:{
+        from: 'EUR',
+        to: 'CHF',
+        amount: '',
         result: '',
-        currency: "Euro",
-        typeOperation: "Kup",
+        data: '',
+        isValid: true,
+        request: {},
+        isValid: true,
     },
-    transactionHistory: []
+    transactionHistory: [],
   }
 
-
 const reducers = {
-    ratings: ratingsRedux,
-    list: listRedux,
-    transactionHistory: transactionHistoryRedux
+    transactionHistory: transactionHistoryRedux,
+    selectMoney: selectMoneyRedux,
 }
 
 const storeReducer = combineReducers(reducers);

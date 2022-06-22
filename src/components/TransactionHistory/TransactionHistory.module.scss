@@ -1,0 +1,38 @@
+
+.transactionPageWrapper{
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 33px;
+}
+.titleWrapper{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    border-bottom: 2px solid #335566;
+    .titleData{
+        margin-right: 4px;
+        color: #335566;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}
+
+.historyWrapper{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #335566;
+    .dataStyl{
+        color: #335566;
+        font-size: 16px;
+    }
+    .dataStylBold {
+        color: #335566;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+    }
+    .iconFinal{
+        color: #335566;;
+    }
+}

@@ -13,6 +13,10 @@ const baseConfig = () => ({
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader'
+      } ,
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -31,6 +35,10 @@ const baseConfig = () => ({
 const devConfig = () => ({
   module: {
     rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader'
+      }, 
       {
         test: /\.(s*)css$/,
         use: [
@@ -52,6 +60,10 @@ const devConfig = () => ({
 const prodConfig = () => ({
   module: {
     rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader'
+      }, 
       {
         test:/\.(s*)css$/,
         use:[
